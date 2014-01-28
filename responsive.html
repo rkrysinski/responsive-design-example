@@ -1,106 +1,102 @@
 <html>
-<head>
-<title>Responsive layout</title>
-<style type="text/css">
- .header{
-       background-color:#CCC;
-       height:150px;
- }
- .content{
-       background-color:#FFC;
-       display:inline-block;
-       width:600px;
-       text-align:left; 
-       vertical-align: top;
-        /* For IE 7 */
-        zoom: 1;
-        *display: inline;       
- }
- .sidebar{
-       background-color:#AAC;
-       display:inline-block;
-       width:300px;
-       text-align:left;
-       vertical-align: top;
-        /* For IE 7 */
-        zoom: 1;
-        *display: inline;       
-       }
-       
-#middlewrap, .sidebar, .content, h2{
-      margin: 0;
-      padding: 0;
-}
+	<head>
+		<title>Responsive layout</title>
+		<style type="text/css">
+			.header {
+				height: 150px;
+				width: 950px;
+			}
+			.content {
+				position: relative;
+				float: left;
+				width: 600px;
+			}
+			.sidebar {
+				position: relative;
+				float: right;
+				width: 300px;
+			}
+			.footer {
+				clear: both;
+				height: 150px;
+			}
+			#wrap {
+				background-color: #CCC;
+				color: #69C;
+				font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+			}
 
- .footer{
-       background-color:#BFC;
-       clear:both;
-       height:150px;
-       }
- #wrap{
-       color:#69C;
-       font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
-       }
-#middlewrap {
-      text-align:center;
-      }      
-      
-/* for 980 or less 
-@media screen and (max-width:980px){
-#pagewrap{
-      width:94%;}
-.content{
-      width:65%;}
-.sidebar{
-      width:30%;}
-}
-*/
-/* for 700 or less*/
-@media screen and (max-width:700px){
- .content{
-      width:auto;
- }
- .sidebar{
-      width:auto;
-      }
-}
+			/* for 980 or less*/
+			@media screen and (max-width: 980px) {
+				#pagewrap {
+					width: 94%;
+				}
+				.content {
+					width: 65%;
+				}
+				.sidebar {
+					width: 30%;
+				}
+			}
 
-/* for 480 or less*/
-@media screen and (max-width:480px){
-.header{
-       height:auto;
-      }
-.sidebar{
-      display:none;
-      }
-}
+			/* for 700 or less*/
+			@media screen and (max-width: 700px) {
+				.content {
+					width: auto;
+					float: none;
+				}
+				.sidebar {
+					width: auto;
+					float: none;
+				}
+			}
 
-</style>
-<!--[if lt IE 9]>
-<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-<![endif]-->
-</head>
-<body>
-<div id="wrap">
-<div class="header">    
-<h2>Header</h2>
-<p>Some logo design here</p>
-</div>
-<div id="middlewrap">
-<div class="sidebar">
-<h2>Sidebar</h2>
-<p>Nunc adipiscing venenatis lorem. Sed sit amet tortor vel enim lacinia mattis. Aliquam dapibus rhoncus turpis. Etiam tincidunt quam ut urna. Aenean vel tellus. Morbi risus. Vestibulum ut nunc. Praesent orci. Curabitur pharetra, quam ut euismod tempor, augue ligula convallis massa, ut dictum arcu augue in tellus. Donec condimentum mi a magna. In velit. Curabitur accumsan mattis ante.</p>
-</div>
-<div class="content">
-<h2>Content</h2>
-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi aliquet euismod nulla. Maecenas facilisis consectetuer purus. Nulla vestibulum molestie elit. Pellentesque pellentesque. Donec congue tempus velit. Sed aliquet risus ut sem. Vivamus et diam eu dui tincidunt viverra. Mauris malesuada pede nec justo. Nulla pulvinar. Pellentesque tincidunt nisi sit amet odio.</p>
-<p>Nunc adipiscing venenatis lorem. Sed sit amet tortor vel enim lacinia mattis. Aliquam dapibus rhoncus turpis. Etiam tincidunt quam ut urna. Aenean vel tellus. Morbi risus. Vestibulum ut nunc. Praesent orci. Curabitur pharetra, quam ut euismod tempor, augue ligula convallis massa, ut dictum arcu augue in tellus. Donec condimentum mi a magna. In velit. Curabitur accumsan mattis ante.</p>
-<p>Nunc adipiscing venenatis lorem. Sed sit amet tortor vel enim lacinia mattis. Aliquam dapibus rhoncus turpis. Etiam tincidunt quam ut urna. Aenean vel tellus. Morbi risus. Vestibulum ut nunc. Praesent orci. Curabitur pharetra, quam ut euismod tempor, augue ligula convallis massa, ut dictum arcu augue in tellus. Donec condimentum mi a magna. In velit. Curabitur accumsan mattis ante.</p>
-</div>
-</div>
-<div class="footer">
-<h2>Footer</h2>
-</div>
-</div>
-</body>
+			/* for 480 or less*/
+			@media screen and (max-width: 480px) {
+				.header {
+					height: auto;
+				}
+				.sidebar {
+					display: none;
+				}
+			}
+
+		</style>
+		<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+		<script>
+		alert('test');
+		</script>
+		<![endif]-->
+	</head>
+	<body>
+
+		<div id="wrap">
+			<div class="header">
+				<h2>Header</h2>
+				<p>
+					Some logo design here
+				</p>
+			</div>
+			<div class="content">
+				<h2>Content</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi aliquet euismod nulla. Maecenas facilisis consectetuer purus. Nulla vestibulum molestie elit. Pellentesque pellentesque. Donec congue tempus velit. Sed aliquet risus ut sem. Vivamus et diam eu dui tincidunt viverra. Mauris malesuada pede nec justo. Nulla pulvinar. Pellentesque tincidunt nisi sit amet odio.
+				</p>
+
+				<p>
+					Nunc adipiscing venenatis lorem. Sed sit amet tortor vel enim lacinia mattis. Aliquam dapibus rhoncus turpis. Etiam tincidunt quam ut urna. Aenean vel tellus. Morbi risus. Vestibulum ut nunc. Praesent orci. Curabitur pharetra, quam ut euismod tempor, augue ligula convallis massa, ut dictum arcu augue in tellus. Donec condimentum mi a magna. In velit. Curabitur accumsan mattis ante.
+				</p>
+			</div>
+			<div class="sidebar">
+				<h2>Sidebar</h2>
+				<p>
+					Nunc adipiscing venenatis lorem. Sed sit amet tortor vel enim lacinia mattis. Aliquam dapibus rhoncus turpis. Etiam tincidunt quam ut urna. Aenean vel tellus. Morbi risus. Vestibulum ut nunc. Praesent orci. Curabitur pharetra, quam ut euismod tempor, augue ligula convallis massa, ut dictum arcu augue in tellus. Donec condimentum mi a magna. In velit. Curabitur accumsan mattis ante.
+				</p>
+			</div>
+			<div class="footer">
+				<h2>Footer</h2>
+			</div>
+		</div>
+	</body>
 </html>
